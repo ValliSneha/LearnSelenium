@@ -26,7 +26,7 @@ public class Loc2Program {
 		//Using CSS locator: "Parenttagname childtagname"
 		String welMsg=driver.findElement(By.cssSelector("div[class='login-container'] h2")).getText();
 		System.out.println(welMsg);
-		Assert.assertEquals(welMsg, "Hello "+name+",");
+		Assert.assertEquals(welMsg, "Hello-"+name+",");
 		//You can also replace tagname with "*" and write "//*[text()='Log Out']". "*" represents anything.
 		driver.findElement(By.xpath("//button[text()='Log Out']")).click();
 		driver.close();
